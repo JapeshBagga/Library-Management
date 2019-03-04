@@ -6,48 +6,49 @@ $aname=$_POST['aname'];
 $bprice=$_POST['bprice'];
 $byear=$_POST['byear'];
 $bsem=$_POST['bsem'];
-	if(isset($_POST['submit'])){
-	$query="insert into books(book_name,book_author,book_price,book_year,book_sem)values('$bname','$aname','$bprice','$byear',
-	'$bsem')";
+	if(isset($_POST['insert'])){
+	$query="insert into books(book_name,book_author,book_price,book_year,book_sem)values('$bname','$aname','$bprice','$byear','$bsem')";
 	mysqli_query($sql,$query);
-	echo"<script> alert('ADDED SUCCESSFULLY') </script>";
+	echo"<script> alert('ADDED SUCCESSFULLY'); location='home.php';</script>";
 }
 ?>	
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
 	<title>LMS-Library Management System</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<center>
 	<h1><u>LIBRARY MANAGEMENT SYSTEM</u></h1>
-	<form method="post" >
+	<h3>ADD NEW BOOK:-</h3>
+	<form method="post" action="#">
 		<table>
-		<center>
 			<tr>
 				<td>BOOK-NAME:</td>
-				<td><input type="text"name="bname"></td>	
+				<td><input type="text"name="bname" autofocus required></td>	
 			</tr>
 			<tr>
 				<td>BOOK-AUTHOR:</td>
-				<td><input type="text"name="aname"></td>
+				<td><input type="text"name="aname"required></td>
 			</tr>
 			<tr>
 				<td>BOOK-PRICE:</td>
-				<td><input type="number"name="bprice"></td>
+				<td><input type="number"name="bprice"required></td>
 			</tr>	
 			<tr>	
 				<td>BOOK-YEAR:</td>
-				<td><input type="number"name="byear"></td>
+				<td><input type="number"name="byear"required></td>
 			</tr>
 			<tr>
 				<td>BOOK-SEMESTER:</td>
-				<td><input type="number"name="bsem"></td>
+				<td><input type="number"name="bsem"required></td>
 			</tr>
 			<tr>
-				<td><input type="submit" name="submit"></td>	
+				<td><input type="submit" name="insert" value="Insert"></td>	
 			</tr>
-		</center>
 		</table>			
 	</form>		
+</center>
 </body>
 </html>
