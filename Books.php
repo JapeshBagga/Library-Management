@@ -1,3 +1,9 @@
+<?php
+$sql=mysqli_connect("localhost","root","","library");
+
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,17 +24,26 @@
 </head>
 <body>
 	<div class="jumbotron j1">
-		<div class="row">
-			<div class="col-md-12 ">
+		<div class="row justify-content-center">
 				<h2>Welcome to Library Management System</h2>
-			</div>
 		</div>
-		<br><br><br>
-		<div class="row">
-			<div class="col-sm-12">
-				
-			</div>
-		</div>		
+		<div class="form">	
+			<form method="POST">
+					BOOK-NAME: &nbsp;&nbsp;<input type="text" name="bname" placeholder="Enter Your Username">
+					<br> <br>
+					BOOK-AUTHOR: &nbsp;&nbsp;<input type="text" name="aname" placeholder="Enter Your Username">
+					<br> <br>
+					BOOK-PRICE: &nbsp;&nbsp;<input type="text" name="price" placeholder="Enter Your Username">
+					<br> <br>
+					BOOK-YEAR: &nbsp;&nbsp;<input type="text" name="uname" placeholder="Enter Your Username">
+					<br> <br>
+					BOOK-SEM: &nbsp;&nbsp;<input type="text" name="uname" placeholder="Enter Your Username">
+					<br> <br>
+					
+					<input type="submit" name="login">
+			</form>
+		</div>
 	</div>
+
 </body>
 </html>
