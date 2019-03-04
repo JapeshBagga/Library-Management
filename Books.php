@@ -1,5 +1,6 @@
 <?php
 $sql=mysqli_connect("localhost","root","","library");
+<if(isset($_POST['submit']))
 
 
 
@@ -27,19 +28,18 @@ $sql=mysqli_connect("localhost","root","","library");
 		<div class="row justify-content-center">
 				<h2>Welcome to Library Management System</h2>
 		</div>
-		<div class="form">	
+		<div class="form">
 			<form method="POST">
-					BOOK-NAME: &nbsp;&nbsp;<input type="text" name="bname" placeholder="Enter Your Username">
+					BOOK-NAME: &nbsp;&nbsp;<input type="text" name="bname" placeholder="Enter The Name of the Book">
 					<br> <br>
-					BOOK-AUTHOR: &nbsp;&nbsp;<input type="text" name="aname" placeholder="Enter Your Username">
+					BOOK-AUTHOR: &nbsp;&nbsp;<input type="text" name="aname" placeholder="Enter Book Author">
 					<br> <br>
-					BOOK-PRICE: &nbsp;&nbsp;<input type="text" name="price" placeholder="Enter Your Username">
+					BOOK-PRICE: &nbsp;&nbsp;<input type="number" name="bprice" placeholder="Enter The Price">
 					<br> <br>
-					BOOK-YEAR: &nbsp;&nbsp;<input type="text" name="uname" placeholder="Enter Your Username">
+					BOOK-YEAR: &nbsp;&nbsp;<input type="number" name="byear" placeholder="Enter The Published Year">
 					<br> <br>
-					BOOK-SEM: &nbsp;&nbsp;<input type="text" name="uname" placeholder="Enter Your Username">
+					BOOK-SEMESTER: &nbsp;&nbsp;<input type="number" name="bsem" placeholder="Enter The Particular Semester for which it is made">
 					<br> <br>
-					
 					<input type="submit" name="login">
 			</form>
 		</div>
