@@ -21,6 +21,11 @@ $bsem=$_POST['bsem'];
 <body>
 <center>
 	<h1><u>LIBRARY MANAGEMENT SYSTEM</u></h1>
+	<nav>
+		<a href="home.php">Home</a>  | 
+		<a href="delete_books.php">Delete Existing Book</a>  |
+		<a href="update_books.php">Update Existing Book</a>
+	</nav><br>
 	<h3>ADD NEW BOOK:-</h3>
 	<form method="post" action="#">
 		<table>

@@ -19,6 +19,7 @@
 	</form><br>
 	<table border="10">
 		<tr>
+			<th>BOOK-ID</th>
 			<th>BOOK-NAME</th>
 			<th>BOOK-AUTHOR</th>
 			<th>BOOK-PRICE</th>
@@ -36,6 +37,7 @@
 			while($row=mysqli_fetch_assoc($result))
 			{ ?>
 				<tr>
+					<td><?php echo $row['id'];         ?></td>
 					<td><?php echo $row['book_name'];  ?></td>
 					<td><?php echo $row['book_author'];?></td>
 					<td><?php echo $row['book_price']; ?></td>

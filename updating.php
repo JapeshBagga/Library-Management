@@ -1,6 +1,7 @@
 <?php
 $sql=mysqli_connect("localhost","root","","library");
 error_reporting(0);
+$id=$_GET['id'];
 $bname=$_POST['bname'];
 $aname=$_POST['aname'];
 $bprice=$_POST['bprice'];
@@ -26,37 +27,35 @@ $bsem=$_POST['bsem'];
 		<a href="insert_books.php">Add New Book</a> |
 		<a href="delete_books.php">Delete Existing Book</a>
 	</nav><br>
-	<h3>UPDATE BOOK & ITS DETAILS:-</h3>
-	<table border="10">
-		<tr>
-			<th>BOOK-ID</th>
-			<th>BOOK-NAME</th>
-			<th>BOOK-AUTHOR</th>
-			<th>BOOK-PRICE</th>
-			<th>BOOK-YEAR</th>
-			<th>BOOK-SEMESTER</th>
-		</tr>
-	<?php   
-		$sql=mysqli_connect("localhost","root","","library");
-		error_reporting(0);
-		$query="select * from books";
-		$result=mysqli_query($sql,$query);
-		while($row=mysqli_fetch_assoc($result))
-		{ ?>
-				<tr>
-					 
-					<td><?php echo $row['book_name'];  ?></td>
-					<td><?php echo $row['book_author'];?></td>
-					<td><?php echo $row['book_price']; ?></td>
-					<td><?php echo $row['book_year'];  ?></td>
-					<td><?php echo $row['book_sem'];   ?></td>
-					<td><?php echo"<a href='updating.php?id=$row[id]'>Update</a>";?>
-					</td>
-				</tr>
-			<?php
-			}
-	?>
-	</table>				
+	<h3>UPDATE BOOK & DETAILS:-</h3>
+	<form method="post" action="#">
+		<table>
+			<tr>
+				<td>BOOK-NAME:</td>
+				<td><input type="text"name="bname" autofocus required></td>	
+			</tr>
+			<tr>
+				<td>BOOK-AUTHOR:</td>
+				<td><input type="text"name="aname"required></td>
+			</tr>
+			<tr>
+				<td>BOOK-PRICE:</td>
+				<td><input type="number"name="bprice"required></td>
+			</tr>	
+			<tr>	
+				<td>BOOK-YEAR:</td>
+				<td><input type="number"name="byear"required></td>
+			</tr>
+			<tr>
+				<td>BOOK-SEMESTER:</td>
+				<td><input type="number"name="bsem"required></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="insert" value="Insert"></td>	
+			</tr>
+		</table>			
+	</form>				
 </center>
 </body>
 </html>
+
